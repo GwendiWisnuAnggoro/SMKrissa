@@ -1,0 +1,750 @@
+/**/
+/*Resposive Foto*/
+/*.p1=Persegi panjang*/
+/*.ps=Persegi panjang panjang ke bawah*/
+/**/
+
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.c{
+    aspect-ratio: 1/1;
+}
+.tuker{
+    /* background-color: black; */
+    width: 50px;
+    height: 50px;
+}
+#ModeCircleOrSquere{
+    background-image: url("img/20220924_180933.png");
+    background-size: cover;
+    width: 100%;
+    margin-left: 10px;
+
+}
+/* animasi transisi mode */
+
+
+
+
+.rounded-circle{
+    animation: animasiA 1s;
+}
+
+.rounded-squere{
+    animation: animasiB 1s;
+}
+/*  */
+/* grid poster */
+.Poster img{
+    width: 100%;
+    border: 10px solid #ddd;
+}
+.Poster{
+    width: 80%;
+    margin: 20px auto;
+    /* background-color: white; */
+    /* border: 10px solid white; */
+    list-style: none;
+    /* box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-gap: 20px;
+}
+/*  */
+
+#p{
+    display: none;
+   
+}
+#z{
+    width:cover;
+}
+a{
+    text-decoration: none;
+}
+.balik{
+    transform: rotate(180deg);
+    margin-top: -1px;
+}
+
+.jumbotron.extra{
+    background: linear-gradient(white,yellow, rgb(255, 221, 0),yellow,white);
+    text-shadow: 1px 1px 1px solid black;
+    color: rgb(21, 0, 247);
+}
+.jumbotron.extra h1{
+    text-align: center;
+    color: brgb(21, 0, 247);
+}
+.jumbotron.extra p{
+   font-size: 20px;
+   text-align: center;
+}
+.g_atas{
+    margin-top: -100px;
+}
+/*Gelombang Animasi*/
+/*.gelombangbawah.satu{
+    animation: airA 30s linear infinite alternate;
+    position: absolute;
+    width: 200%;
+    overflow: hidden;
+    margin-bottom: 10px;
+}*/
+/* .jumbotron.empat{
+    margin-bottom: 100px;
+} */
+
+/* gelombang */
+.css-gelombang-1{
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -10px; 
+    min-height: 100px;
+    max-height: 150px;
+}
+.css-gelombang-2{
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    transform: rotate(180deg);
+    margin-bottom: -260px; 
+    min-height: 100px;
+    max-height: 150px;
+}
+
+.css-gelombang {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-top: -50px; 
+    min-height: 100px;
+    max-height: 150px;
+  }
+  
+  /* Here we declare the SVG node that we wish to animate. */
+  
+  .animasi-gelombang > use {
+    animation: gelombang 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+  }
+  .animasi-gelombang > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+  }
+  .animasi-gelombang > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+  }
+  .animasi-gelombang > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+  }
+  .animasi-gelombang > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+  }
+  @keyframes gelombang {
+    0% {
+      transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+      transform: translate3d(85px, 0, 0);
+    }
+  }
+  /* Mobile Optimization */
+  @media (max-width: 768px) {
+    .css-gelombang {
+      height: 40px;
+      min-height: 40px;
+    }
+  }
+
+
+/* @keyframes airA{
+    0%{
+        transform: translateX(0);
+        opacity: .5;
+    }
+    100%{
+        transform: translateX(50%);
+        opacity: 1;
+    }
+}*/ 
+
+/*@keyframes trnss{
+    0%{
+
+        opacity: .5;
+    }
+    100%{
+        opacity: 1
+    }
+}*/
+
+
+/*.jumbotron.dua{
+    position: absolute;
+}*/
+.overlay:target .p1{
+    animation: animasi_ 1s
+}
+.overlay:target .ps{
+    animation: animasi_ 1s
+}
+
+.pitik{
+    position: absolute;
+}
+.overlay .p1{
+    height: 45%;
+    width: 90%;
+    margin-top: 30%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+
+}
+.overlay .ps{
+    height: 90%;
+    width: 90%;
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+/*animasi gambar*/
+@keyframes animasi_{
+    0%{
+        /*transform: ;*/
+        transform: rotateZ(-180deg) scale(0);
+        opacity: (0)
+    }
+    100%{
+        /*transform: ;*/
+        transform: rotateZ(0deg) scale(1);
+        opacity: 1;
+    }
+}
+@keyframes animasiA{
+    0%{
+        /*transform: ;*/
+        transform: rotateZ(-180deg) scale(1);
+        opacity: 0.5;
+
+    }
+    100%{
+        /*transform: ;*/
+        transform: rotateZ(0deg) scale(1);
+        opacity: 1;
+
+    }
+}
+@keyframes animasiB{
+    0%{
+        /*transform: ;*/
+        transform: rotateZ(180deg) scale(1);
+        opacity: 0.5;
+
+    }
+    100%{
+        /*transform: ;*/
+        transform: rotateZ(0deg) scale(1);
+        opacity: 1;
+
+    }
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 9999;
+    text-align: center;
+    padding: 130px 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.overlay:target{
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+
+}
+.overlay .Keluar-Close{
+    text-decoration: none;
+    position: absolute;
+    color: red;
+    background-color: black;
+    top: 0;
+    margin-top: 20%;
+}
+.developer{
+    text-align: center;
+ /*   font-size: 15px;*/
+    color: #000;
+    margin-top: 20px;
+    opacity: 100%;
+    margin-bottom: 10px
+}
+#loadinganimation{
+    background: #ffff url(img/Loading.gif) no-repeat center center;
+    background-size: 50%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+.jumbotron{
+    padding-top: 2rem;
+    /*background-image: url("img/Gradien1.png");*/
+    background: linear-gradient( white, #5B79A0);
+
+
+}
+
+/* .Poster{
+    position: relative;
+} */
+
+.jumbotron.tiga{
+    background-image: url("img/SMKLogoBesar.png");
+        background-size: 500px 1200px; 
+        background-position: -50px -100px;
+        background-repeat: no-repeat;
+}
+
+.gelombangbawah.satu{
+    margin-bottom: 0px;
+}
+
+.gelombang.dua {
+    margin-bottom: -5px;
+    overflow: hidden;
+}
+
+.jumbotron.empat{
+    background-color: #a2d9ff;
+    background-image: none;
+    margin-top: -20px;
+}
+
+.jumbotron.dua{
+    background-image: none;
+    margin-top: 200px;
+    background-color: #00eeff;
+}
+/* .Poster img{
+    width: 300px;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    margin-left: 40px;
+    border: 2px solid black;
+   
+} */
+.jumbotron.empat svg{
+    margin-bottom: 100px;
+}
+
+
+.jumbotron.dua svg{
+    margin-top: -150px;
+}
+
+button {
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0); 
+    outline: none;
+}
+#play{
+    background-image: url("img/StopSong.png");
+}
+
+.lokasi{
+    margin-left: 5px;
+}
+
+/* floating css */
+.fab{
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: red;
+    box-shadow: 1px 2px 4px black;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.fab:hover{
+    cursor: pointer;
+    opacity: 80%;
+
+}
+
+.fab img{
+    width: 150%;
+    transform: rotate(45deg);
+    transform: 0.4s;
+}
+
+.box{
+    position: fixed;
+    bottom: 44px;
+    right: 5px;
+    height: 0px;
+    transition-delay: 0.3s ;
+    width: 80px;
+    transition: 0.5 cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item{
+    overflow: hidden;
+    border-radius: 50%;
+    transition: 0.4s ease-in;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 2px 4px black;
+}
+
+
+/* 
+} */
+.item1{
+    transition-delay: 0.2s;
+}
+.item2{
+    transition-delay: 0.2s;
+    margin-bottom: 20px;
+    
+}
+.item3{
+    transition-delay: 0.2s;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.item:hover{
+    cursor: pointer;
+}
+
+.item:hover img{
+    opacity: 80%;
+}
+
+.box-active{
+    height: 290px;
+}
+
+.fab-active img{
+    transform: rotate(270deg);
+    width: 150%;
+  }
+
+/*  */
+
+.latin{
+    font-family: Oleo Script Swash Caps;
+}
+
+
+
+/* ukuran hp */
+@media screen and (min-width: 576px){
+    .peta{
+        margin-left: 10px;
+        margin-top: 0px;
+    }
+    .keterangan{
+        font-size: 20px;
+    }
+    .visi{
+        margin-left: 20px;
+    }
+    .paragraf{
+        margin-left: 20px;
+    }
+    .misi{
+        margin-left: 20px;
+    }
+    .jumbotron.dua svg{
+        margin-top: -0px;
+    }
+}
+/* ukuran tablet */
+@media screen and (min-width: 768px){
+    .peta{
+        margin-left: 490px;
+        margin-top: -80px;
+    }
+    .keterangan{
+        margin-left: 15px;
+    }
+    .css-gelombang{
+        margin-top: -60px;
+    }
+   .paragraf{
+       margin-left: 10px;
+   }
+    .jumbotron.tiga{
+    background-position: -150px -90px; 
+    background-size: cover;
+    }
+    /* .Poster img{
+        width: 250px;
+        margin-left: 75px; 
+        margin-right: -30px;
+        border-radius: 5px;
+        border: 2px solid black;
+        background-repeat: no-repeat;
+    } */
+    .jumbotron.dua svg{
+        margin-top: -250px;
+    }
+
+    .gelombang.dua {
+        margin-bottom: 0px;
+    }
+        .overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 9999;
+    text-align: center;
+    padding: 130px 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+
+}
+/*hp miring*/
+@media screen and (min-width: 915px){
+        .overlay{
+    position: fixed;
+    left: 0;
+    top: -130px;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 9999;
+/*    text-align: center;
+    padding: 130px 0;*/
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+    .overlay .p1{
+    height: 110%;
+    width: 90%;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    }
+       .overlay .ps{
+    height: 120%;
+    width: 40%;
+    margin-top: -5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    }
+}
+@media screen and (min-width: 844px){
+        .overlay{
+    position: fixed;
+    left: 0;
+    top: -130px;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 9999;
+/*    text-align: center;
+    padding: 130px 0;*/
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+    .overlay .p1{
+    height: 110%;
+    width: 90%;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    }
+       .overlay .ps{
+    height: 120%;
+    width: 40%;
+    margin-top: -2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    }
+}
+
+
+/* destop */
+@media screen and (min-width: 906px){
+    .peta{
+        margin-left: 700px;
+        margin-top: -90px;
+    }
+    .visi{
+        margin-left: 20px;
+    }
+    .keterangan{
+        margin-left: 15px;
+    }
+
+    .paragraf{
+        margin-left: 8px;
+    }
+
+    .misi{
+        margin-left: 20px;
+    }
+     .jumbotron.tiga{
+        background-position: 0px -100px;
+        background-size: cover;
+    } 
+    /* .Poster img{
+        width: 250px;
+        margin-left: 60px;
+        margin-right: -30px;
+        border-radius: 5px;
+        border: 2px solid black;
+        background-repeat: no-repeat;
+    } */
+    .jumbotron.dua svg{
+        margin-top: -250px;
+    }
+    .gelombang.dua {
+        margin-bottom: 0px;
+    }
+    .overlay{
+    position: fixed;
+    left: 0;
+    top: -100px;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 9999;
+/*    text-align: center;
+    padding: 130px 0;*/
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+    .overlay .p1{
+    height: 110%;
+    width: 90%;
+    margin-top: -1%;
+    margin-left: 5%;
+    margin-right: 5%;
+    }
+       .overlay .ps{
+    height: 120%;
+    width: 40%;
+    margin-top: -2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    }
+
+}
+
+
+/* destop */
+@media screen and (min-width: 992px){
+    .peta{
+        margin-left: 700px;
+        margin-top: -90px;
+    }
+    .css-gelombang-1{
+        position: relative;
+        width: 100%;
+        height: 15vh;
+        margin-bottom: -100px; 
+        min-height: 100px;
+        max-height: 150px;
+    }
+    .visi{
+        margin-left: 20px;
+    }
+    .keterangan{
+        margin-left: 15px;
+    }
+
+    .paragraf{
+        margin-left: 8px;
+    }
+
+    .misi{
+        margin-left: 20px;
+    }
+     .jumbotron.tiga{
+        background-position: 0px -100px;
+        background-size: cover;
+    } 
+    /* .Poster img{
+        width: 250px;
+        margin-left: 75px;
+        margin-right: -30px;
+        border-radius: 5px;
+        border: 2px solid black;
+        background-repeat: no-repeat;
+    } */
+    .jumbotron.dua svg{
+        margin-top: -250px;
+    }
+    .gelombang.dua {
+        margin-bottom: 0px;
+    }
+    .overlay{
+    position: fixed;
+    left: 0;
+    top: -100px;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 9999;
+/*    text-align: center;
+    padding: 130px 0;*/
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+    .overlay .p1{
+    height: 110%;
+    width: 90%;
+    margin-top: -1%;
+    margin-left: 5%;
+    margin-right: 5%;
+    }
+       .overlay .ps{
+    height: 120%;
+    width: 40%;
+    margin-top: -2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    }
+    /* .jumbotron.empat{
+        
+    } */
+}
+
